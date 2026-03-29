@@ -1,10 +1,10 @@
 import qrcode
 
-url="https://github.com/Purabk171/tech-flow-automation.git"
+url="https://purabk171.github.io/tech-flow-automation/"
 
 
 qr = qrcode.make(url)
 
 
-qr.save("qr.png")
+qr.save("tech-flow-automation.png")
 print("qr done")
