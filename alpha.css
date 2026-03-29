@@ -1,0 +1,100 @@
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    max-height: 400px;
+}
+
+@media (min-width: 768px) {
+    .chart-container {
+        height: 350px;
+    }
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.tab-active {
+    background-color: #f3f4f6;
+    border-left: 4px solid #0ea5e9;
+    font-weight: 600;
+    color: #0369a1;
+}
+
+.tab-inactive {
+    background-color: white;
+    border-left: 4px solid transparent;
+    color: #4b5563;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 1.25rem;
+    top: 2rem;
+    bottom: 0;
+    width: 2px;
+    background-color: #e5e7eb;
+    z-index: 0;
+}
+
+.glass-panel {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Splash Screen Styles */
+#splash-screen {
+    position: fixed;
+    inset: 0;
+    background-color: #fafaf9;
+    /* stone-50 */
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
+}
+
+.splash-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.logo-animate {
+    animation: logoPulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes logoPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: scale(0.95);
+    }
+}
